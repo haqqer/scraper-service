@@ -28,9 +28,9 @@ def otherday():
 def today():
     room = request.args.get('room')
     if(room != None):
-        url = 'https://sdk.semarangkota.go.id/komunitas/datapenggunaanruangan'+room+'.php?data=lainnya'
+        url = 'https://sdk.semarangkota.go.id/komunitas/datapenggunaanruangan'+room+'.php?data=ini'
     else:
-        url = 'https://sdk.semarangkota.go.id/komunitas/datapenggunaanruangan.php?data=lainnya'
+        url = 'https://sdk.semarangkota.go.id/komunitas/datapenggunaanruangan.php?data=ini'
     content = ScrapperSdk(url)
     result = content.get()
     return jsonify(result)
